@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe_app/core/constants/app_colors.dart';
 import 'package:tic_tac_toe_app/core/utlis/app_themes.dart';
 import 'package:tic_tac_toe_app/features/home/presentation/views/home_view.dart';
 
@@ -13,6 +12,7 @@ class TicTacToeApp extends StatelessWidget {
       title: 'Tic Tac Toe',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.transparent,
         textSelectionTheme: AppThemes.textSelectionThemeData,
         inputDecorationTheme: AppThemes.inputDecorationTheme,
         useMaterial3: true,

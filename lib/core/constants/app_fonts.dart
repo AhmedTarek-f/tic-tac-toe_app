@@ -18,6 +18,11 @@ abstract final class AppFonts{
     fontWeight: FontWeight.w400,
     color: AppColors.white,
   );
+  static TextStyle fontSize14Normal = GoogleFonts.montserrat(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.black,
+  );
   static TextStyle fontSize36Bold = GoogleFonts.montserrat(
     fontSize: 36,
     fontWeight: FontWeight.w700,
