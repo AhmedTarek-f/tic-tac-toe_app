@@ -1,8 +1,10 @@
 class PlayerModel{
-  const PlayerModel({
-  required this.playerName,
-  required this.playerScore,
+  PlayerModel({
+    required this.playerName,
+    required this.playerScore,
+    this.oneWinnerGameSignsIndexes,
   });
   final String playerName;
-  final int playerScore;
+  int playerScore;
+  List<int>? oneWinnerGameSignsIndexes;
 }
