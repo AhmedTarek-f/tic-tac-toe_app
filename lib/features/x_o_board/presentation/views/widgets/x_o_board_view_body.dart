@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tic_tac_toe_app/core/utlis/screen_size.dart';
-import 'package:tic_tac_toe_app/features/home/presentation/views_model/home_cubit.dart';
 import 'package:tic_tac_toe_app/features/x_o_board/presentation/views/widgets/board_container.dart';
 import 'package:tic_tac_toe_app/features/x_o_board/presentation/views/widgets/player_status.dart';
 import 'package:tic_tac_toe_app/features/x_o_board/presentation/views/widgets/player_turn.dart';
