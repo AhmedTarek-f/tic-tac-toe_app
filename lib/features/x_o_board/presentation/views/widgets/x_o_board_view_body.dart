@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tic_tac_toe_app/core/utlis/screen_size.dart';
-import 'package:tic_tac_toe_app/features/x_o_board/data/models/player_model.dart';
+import 'package:tic_tac_toe_app/features/home/presentation/views_model/home_cubit.dart';
 import 'package:tic_tac_toe_app/features/x_o_board/presentation/views/widgets/board_container.dart';
 import 'package:tic_tac_toe_app/features/x_o_board/presentation/views/widgets/player_status.dart';
 import 'package:tic_tac_toe_app/features/x_o_board/presentation/views/widgets/player_turn.dart';
+import 'package:tic_tac_toe_app/features/x_o_board/presentation/views_model/x_o_board_cubit.dart';
 
 class XOBoardViewBody extends StatelessWidget {
   const XOBoardViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = BlocProvider.of<XOBoardCubit>(context);
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: ScreenSize.getWidth(context)*0.034,
@@ -17,19 +20,13 @@ class XOBoardViewBody extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const PlayersStatus(
-            firstPlayer: PlayerModel(
-                playerName: "Ahmed tarek",
-                playerScore: 2
-            ),
-            secondPlayer: PlayerModel(
-                playerName: "Bassem Tarek",
-                playerScore: 1
-            ),
-            isNormalGameMode: true,
+          PlayersStatus(
+            firstPlayer: controller.firstPlayer,
+            secondPlayer: controller.secondPlayer,
+            isNormalGameMode: controller.isNormalMode,
           ),
           SizedBox(height: ScreenSize.getHeight(context)*0.012,),
-          const PlayerTurn(playerName: "Ahmed Tarek",),
+          const PlayerTurn(),
           SizedBox(height: ScreenSize.getHeight(context)*0.012,),
           const Expanded(child: BoardContainer()),
         ],

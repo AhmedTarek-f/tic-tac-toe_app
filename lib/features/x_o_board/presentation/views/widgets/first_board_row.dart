@@ -9,11 +9,11 @@ class FirstBoardRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: ClickableXOButton(xOrO: "x",)),
+        Expanded(child: ClickableXOButton(tileIndex:0)),
         VerticalDivider(color: AppColors.black,),
-        Expanded(child: ClickableXOButton(xOrO: "o",)),
+        Expanded(child: ClickableXOButton(tileIndex:1)),
         VerticalDivider(color: AppColors.black,),
-        Expanded(child: ClickableXOButton()),
+        Expanded(child: ClickableXOButton(tileIndex:2)),
       ],
     );
   }
